@@ -1,0 +1,33 @@
+p.times {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 25px;       
+}
+p.georgia {
+    font-family: "Georgia", Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: darkgreen;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.linker {
+    text-decoration: none;
+}
+
+.linker:hover {
+    text-decoration: underline;
+}
+
+.you {
+    text-transform: uppercase;
+}
+
+.img {
+    float: left;
+    margin: 10px;
+}

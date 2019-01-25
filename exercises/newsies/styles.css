@@ -1,0 +1,49 @@
+h1 {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: blueviolet;
+    text-align: center;
+    font-size: 70px;
+    text-decoration-line: underline;
+    background-color: #FFFEFB;
+}
+
+h2 {
+    font-family: 'Major Mono Display', monospace;
+    color: #9EB2AC;
+    text-align: center;
+    font-size: 50px;
+}
+
+body {
+    background-color: #C3FFE2
+}
+
+p {
+    font-size: 30px;
+    text-align: left;
+}
+
+span {
+    font-size: 30px;
+    text-align: left;
+}
+
+.school {
+    text-decoration-line: underline
+}
+
+.waste {
+    text-decoration-line: line-through
+}
+
+.clas {
+    margin-top: 200px;
+    font-size: 75px;
+    text-align: center;
+}
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+}
