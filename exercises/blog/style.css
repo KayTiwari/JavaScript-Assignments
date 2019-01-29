@@ -1,0 +1,112 @@
+ul {
+    position: fixed;
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F8F8F8
+
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #777;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #333;
+}
+
+.mainrole {
+    background-color: #2a3642;
+    position: relative;
+    z-index: -1;
+    display: inline-block;
+    top:30px;
+    height: 768px;
+    width: 100%;
+    z-index: 30px;
+}
+.row {
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    top: 253px;
+    left: 20%;
+    height: 100%;
+    width: 60%;
+    border: #AB8886;
+    border-radius: 25px;
+    border-style: solid;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    overflow: auto;
+}
+h1 {
+    font-family: 'Sarabun', sans-serif;
+
+}
+.Stars {
+    position: absolute;
+    top: 70px;
+    right: 200px;
+}
+.lightsinsky {
+    position: relative;
+    height: 75%;
+    width: 60%;
+    z-index: -2;
+}
+.blogtext {
+    font-size: .25in;
+    font-family: 'Noto Serif SC', serif;
+    border-bottom: 2px, #AB8886;
+}
+.lights {
+    color: #ABAB55;
+    margin: 0;
+    padding: 0;
+}
+.slights {
+    color: #ABAB55;
+    margin: 20px;
+    padding: 100px;
+}
+.sunsettrees {
+    position: relative;
+    height: 75%;
+    width: 60%;
+    z-index: -2;
+    float: right;
+}
+.fireworks {
+    position: relative;
+    height: 75%;
+    width: 60%;
+    z-index: -2;
+}
+.flights {
+    color: #ABAB55;
+    margin: 0px;
+    padding: 0px;
+}
+.fire {
+    position: absolute;
+    right: 150px;
+    top: 2700px;
+}
+.fblogtext {
+    font-size: .25in;
+    font-family: 'Noto Serif SC', serif;
+    border-bottom: 2px, #AB8886;
+    float: center;
+}

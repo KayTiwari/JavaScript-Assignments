@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+.fblue {
+    display: inline-block;
+    width: 33%;
+    height: 768px;
+    background-color: blue;
+    margin: 0px;
+}
+
+.fwhite {
+    display: inline-block;
+    width: 33%;
+    height: 768px;
+    background-color: white;
+    margin: 0px;
+}
+
+.fred {
+    display: inline-block;
+    width: 33%;
+    height: 768px;
+    background-color: red;
+    margin: 0px;
+    border-style: hidden;
+}
+
+.gyellow {
+    background-color: #f5cb62;
+    display: inline-block;
+    height: 256px;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+}
+.gblack {
+    background-color: black;
+    display: inline-block;
+    height: 256px;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+}
+.gred {
+    background-color: red;
+    display: inline-block;
+    height: 256px;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+}
+
+.mwhite {
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    left: 0;
+    height: 768px;
+    width: 50%
+
+}
+
+.mred {
+    display: inline-block;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50%;
+    width: 75%;
+
+}
+
+.mgreen {
+    display: inline-block;
+    background-color: #4a7940;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    width: 75%;
+}
+.sred {
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    height: 768px;
+    width: 100%;
+}
+
+.svwhite {
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    left: 662px;
+    top: 150px;
+}
+
+.shwhite {
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    width: 50%;
+    height: 15%;
+    left: 347px;
+    top: 300px;
+}
+
+.swblue {
+    display: inline-block;
+    background-color: #316da2;
+    position: relative;
+    height: 800px;
+    width: 100%;
+
+}
+
+.swvgold {
+    display: inline-block;
+    background-color: #f5ca61;
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    left: 25%;
+}
+.swhgold {
+    display: inline-block;
+    background-color: #f5ca61;
+    position: absolute;
+    top: 47%;
+    height: 20%;
+    width: 100%;
+    left: 0;
+}
+.gared {
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    height: 768px;
+    width: 100%;
+}
+.gawhite1 {
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    top: 33%;
+    height: 20px;
+    width: 100%;
+    left: 0;
+}
+.gablue {
+    display: inline-block;
+    background-color: navy;
+    position: absolute;
+    top: 37.6%;
+    height: 300px;
+    width: 100%;
+    left: 0;
+}
+.gawhite2 {
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    height: 20px;
+    width: 100%;
+    left: 0;
+}
+.gagreen {
+    display: inline-block;
+    background-color: darkgreen;
+    position: absolute;
+    top: 20%;
+    height: 20%;
+    width: 100%;
+    left: 0;
+}
+
