@@ -1,3 +1,11 @@
+.maintitle {
+    font-size: 50pt;
+    font-family: 'Cormorant', serif;
+    text-align: center;
+}
+.golddot {
+    color: #ABAB55;
+}
 ul {
     position: fixed;
     display: inline;
@@ -7,7 +15,8 @@ ul {
     padding: 0;
     width: 100%;
     overflow: hidden;
-    background-color: #F8F8F8
+    background-color: #F8F8F8;
+    opacity: 5;
 
 }
 li {
@@ -65,16 +74,14 @@ h1 {
     height: 75%;
     width: 60%;
     z-index: -2;
+    float: left;
 }
 .blogtext {
     font-size: .25in;
     font-family: 'Noto Serif SC', serif;
     border-bottom: 2px, #AB8886;
-}
-.lights {
-    color: #ABAB55;
-    margin: 0;
-    padding: 0;
+    padding: 20px;
+    margin-top: 450px;
 }
 .slights {
     color: #ABAB55;
@@ -87,12 +94,14 @@ h1 {
     width: 60%;
     z-index: -2;
     float: right;
+    margin: 10px;
 }
 .fireworks {
     position: relative;
-    height: 75%;
+    height: 85%;
     width: 60%;
     z-index: -2;
+    float: left;
 }
 .flights {
     color: #ABAB55;
@@ -109,4 +118,11 @@ h1 {
     font-family: 'Noto Serif SC', serif;
     border-bottom: 2px, #AB8886;
     float: center;
+    margin-top: 500px;
+}
+.sblogtext {
+    font-size: .25in;
+    font-family: 'Noto Serif SC', serif;
+    border-bottom: 2px, #AB8886;
+    padding: 4px;
 }
