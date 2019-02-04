@@ -1,0 +1,21 @@
+#form1 {
+    border: 10px crimson;;
+    border-style: solid;
+    padding: 40px;
+    background-color: rgb(172, 75, 75);
+}
+#form2 {
+    border: 10px goldenrod;
+    border-style: dashed;
+    padding: 40px;
+    background-color: rgb(189, 189, 52);
+}
+#form3 {
+    border: 10px green;
+    border-style: double;
+    padding: 40px;
+    background-color: greenyellow;
+}
+body {
+    background-color: rgb(4, 216, 181);
+}
