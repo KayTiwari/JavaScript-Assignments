@@ -5,20 +5,203 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+.texttitle {
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    font-size: 100pt;
+    background: linear-gradient(#eee, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 250px;
+}
 .Goomba {
-    border: 33%;
+    margin: 1px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -50%);
+
 }
 .goomba {
-    position: relative;
-    height: 10%;
-    width: 10%;
+    height: auto;
+    max-width: 70%;
 }
 .Bobomb {
-    border: 33%;
+   margin: 1px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 .bobomb {
-    position: relative;
-    position: center;
-    height: 10%;
-    width: 10%;
+    height: 70%;
+    width: 70%;
 }
+.Cheep-Cheeps {
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-92%, -54%);
+}
+.cheep {
+    height: 60%;
+    width: 60%;
+    left: 10px;
+}
+.monstername {
+    margin: none;
+    display: block;
+    size: 0.5%;
+}
+.Coins {
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+    height: 200px;
+    width: 800px;
+    border: 5px solid gold;
+    overflow: auto;
+    background: #eee;
+}
+#button {
+    height: 200px;
+    width: 200px;
+}
+#output {
+    font-size: 60px;
+}
+@media screen and (max-width: 1200px) {
+.texttitle {
+    left: 200px;
+    font-size: 60pt;
+    width: auto;
+}
+.goomba {
+    height: 30%;
+    width: 30%;
+    display: block;
+}
+.bobomb {
+    height: 30%;
+    width: 30%;
+    display: block;
+}
+.cheep {
+    height: 30%;
+    width: 30%;
+    display: block;
+}
+.Coins {
+    position: absolute;
+    bottom: 50px;
+    left: 300px;
+    height: 200px;
+    width: 600px;
+    border: 5px solid gold;
+    overflow: auto;
+    background: #eee;
+}
+#button {
+    height: 200px;
+    width: 200px;
+}
+#output {
+    font-size: 35px;
+}
+}
+@media screen and (max-width: 917px) {
+.Coins {
+    left: 150px;
+}
+}
+@media screen and (max-width: 764px) {
+.texttitle {
+    left: 100px;
+    font-size: 30pt;
+    width: auto;
+}
+.Goomba {
+    height: 30%;
+    width: 30%;
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 30%;
+}
+.Bobomb {
+    height: 30%;
+    width: 30%;
+    display: block;
+    position: absolute;
+    left: 155px;
+    top: 50%;
+}
+.Cheep-Cheeps {
+    height: 30%;
+    width: 30%;
+    display: block;
+    position: absolute;
+    left: 250px;
+    top: 70%;
+}
+.monstername {
+    size: 10%;
+}
+.Coins {
+    position: absolute;
+    bottom: 30px;
+    left: 400px;
+    height: 550px;
+    width: 200px;
+    border: 5px solid gold;
+    overflow: auto;
+    background: #eee;
+}
+#button {
+    height: 200px;
+    width: 200px;
+}
+#output {
+    font-size: 60px;
+}
+}
+@media screen and (max-width: 764px) {
+.Coins {
+    position: absolute;
+    bottom: 30px;
+    left: 400px;
+    height: 600px;
+    width: 200px;
+    border: 5px solid gold;
+    overflow: auto;
+    background: #eee;
+}
+#button {
+    height: 300px;
+    width: 200px;
+}
+#output {
+    font-size: 45px;
+}
+}
+@media screen and (max-width: 610px) {
+.Coins {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    height: 100px;
+    width: 400px;
+    border: 5px solid gold;
+    overflow: auto;
+    background: #eee;
+}
+#button {
+    height: 100px;
+    width: 200px;
+}
+#output {
+    font-size: 20px;
+}
+}
+
