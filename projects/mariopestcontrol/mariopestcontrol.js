@@ -8,6 +8,6 @@ function submit() {
     if (sum === 0) {
         document.getElementById('output').textContent = `Get to work!`
     } else {
-    document.getElementById('output').textContent = `You won ${sum} coins!`
+    document.getElementById('output').innerHTML = `<img class='coin' src=\"https://orig00.deviantart.net/465d/f/2017/171/9/f/mario_coin_1985_gif_by_augustohirakodias-dbdezac.gif" width=\"50px\" height=\"50px\"> You won ${sum} coins!  <img class='coin' src=\"https://orig00.deviantart.net/465d/f/2017/171/9/f/mario_coin_1985_gif_by_augustohirakodias-dbdezac.gif" width=\"50px\" height=\"50px\">`
 }
 }
