@@ -1,0 +1,199 @@
+body {
+    background-image: url(https://media2.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif?cid=3640f6095c59cfb14536637141919f0b);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    color: #eeeeee;
+    font-size: 35pt;
+    border: 5px solid #001eff;
+    margin: 0;
+    background-image: url(https://i.imgur.com/l6s8LEO.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nano {
+    color: rgb(161, 255, 20);
+}
+nav {
+    display: block;
+    width: 100%;
+    color: #d600ff;
+}
+.container {
+    border: 5px solid #001eff;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.521);
+    list-style-type: georgian;
+    height: 35px;
+    margin: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+li a {
+    display: block;
+    color: rgb(161, 255, 20);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+li a:hover {
+    background-color: #d600ff;
+    color: white;
+}
+.homediv {
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.521);
+    overflow: auto;
+    display: flex;
+}
+.homediv1 {
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.521);
+    overflow: auto;
+}
+.cultbody {
+    background-image: url(https://media0.giphy.com/media/CLoo1rNliJ808/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.rucyber {
+    position: relative;
+    height: 10%;
+    width: 50%;
+    margin: 2px;
+    margin-top: 1px;
+}
+h2 {
+    font-size: 25pt;
+    position: relative;
+    color: #eeeeee;
+    font-family: 'Roboto Mono', monospace;
+    height: 50%;
+    width: 50%;
+}
+.maintext {
+    font-size: 15pt;
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(221, 219, 219, 0.788);
+    float: right;
+    margin-left: 2px;
+    right: 0;
+    top: 0;
+}
+.mercbody {
+    background-image: url(https://external-preview.redd.it/evEYWSffHWrPAw7qh-oGDvKOsgGAbz_ZLoPqEojI6-o.gif?width=960&crop=smart&s=0958c1794bfcfb1098201c66d718eb51f2e5fde0);
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+    background-size: cover;
+    background-color: black;
+}
+.contactbody {
+    background-image: url(https://i.pinimg.com/originals/f2/95/8a/f2958a889d9a74c01d645dbc0d8bedbd.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -200px;
+    background-color: black;
+}
+.book {
+    height: 600px;
+    float: left;
+}
+.mind {
+    float: left;
+    margin-right: 0px;
+}
+.culth2 {
+    float: right;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    left: 10px;
+}
+.divmain2 {
+    float: right;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close1 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close3 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}  
+  .close1:hover,
+.close1:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}  
+  .close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}  
+  .close3:hover,
+.close3:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}  
+.mercbox {
+    display: flex;
+}
+.headphones {
+    height: 300px;
+    width: 300px;
+}
+.watch {
+    height: 300px;
+    width: 300px;
+}
+.bike {
+    height: 300px;
+    width: 300px;
+}
