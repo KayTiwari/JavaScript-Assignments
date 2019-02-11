@@ -1,0 +1,30 @@
+{
+    "appetizers": {
+        "name": "Fried zuchinni",
+        "ingredients": ["Zuchinni", "Eggs", "Oil", "Cheese"],
+        "description": "Fried zuchinni served nice and hot"
+    },
+    "cold sandwiches":  {
+        "name": "Turkey roast",
+        "ingredients": ["Bread", "Turkey", "Mayo", "Lettuce", "Chesse", "Tomato"],
+        "description": "Freshly made turkey sandwich with everything on it"
+    },
+    "hot sandiwches": {
+        "name":"Banh mi",
+        "ingredients": ["Bread", "Slaw", "Pork"],
+        "description": "Hot vietnamese sandwich featuring slaw and pork, fries on the side"
+    },
+    "desserts": {
+        "name":"Mint chocolate chip icecream",
+        "ingredients": ["Haagen Dasz Mint chocolate chip icecream"],
+        "description": "The creamiest ice cream on the planet"
+    },
+    "drinks": {
+        "name":"Dr. Pepper",
+        "ingredients":["carbonated soda", "sugar"],
+        "description": "Dr. Pepper"
+    },
+        "name": "White russian",
+        "ingredients": ["Kahlua", "Vodka", "whipped cream"],
+        "description": "The original White russian beverage"
+}

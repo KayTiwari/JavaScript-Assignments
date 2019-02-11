@@ -1,0 +1,72 @@
+.red {
+    background-color: red;
+    border: 5px; 
+    Box-shadow: 5px; 
+    Height: 20px;
+    Width: 20px;
+    Margin: 0px;
+    Padding: 0px;
+    left: 0;
+    top: 0;
+    Opacity: 1;
+}
+.orange {
+    background-color: orange;
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 20px;
+    Width: 20px;
+    Margin: 0px;
+    Padding: 0px;
+    left: 0;
+    top: 30px;
+    Opacity: 1;
+}
+.yellow {
+    background-color: yellow;
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 20px;
+    Width: 20px;
+    Margin: 0px;
+    Padding: 0px;
+    left: 0;
+    top: 50px;
+    Opacity: 1;
+}
+.green {
+    background-color: green;
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 20px;
+    Width: 20px;
+    Margin: 0px;
+    Padding: 0px;
+    left: 0;
+    top: 70px;
+    Opacity: 1;
+}
+.blue {
+    background-color: blue;
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 20px;
+    Width: 20px;
+    Margin: 10px;
+    Padding: 10px;
+    left: 0;
+    top: 90px;
+    Opacity: 1;
+}
+.purple {
+    background-color: purple;
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 20px;
+    Width: 20px;
+    Margin: 0px;
+    Padding: 0px;
+    left: 0;
+    top: 120px;
+    Opacity: 1;
+}
