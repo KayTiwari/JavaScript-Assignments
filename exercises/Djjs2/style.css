@@ -1,72 +1,182 @@
+* {
+    box-sizing: border-box;
+    /* font-size: 20px; */
+}
 .red {
+    display: inline-block;
     background-color: red;
     border: 5px; 
     Box-shadow: 5px; 
-    Height: 20px;
-    Width: 20px;
-    Margin: 0px;
-    Padding: 0px;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
     left: 0;
     top: 0;
     Opacity: 1;
 }
+.red:hover {
+    display: inline-block;
+    transition-property: 1s top 2s bottom;
+    transition-duration: 1s;
+    background-color: orange;
+    border: 30px; 
+    Box-shadow: 500px; 
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
+    /* left: 0;
+    top: 0; */
+    Opacity: 0;
+}
 .orange {
+    display: inline-block;
     background-color: orange;
     border: 5px;
     Box-shadow: 5px;
-    Height: 20px;
-    Width: 20px;
-    Margin: 0px;
-    Padding: 0px;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
+    left: 0;
+    top: 30px;
+    Opacity: 1;
+}
+.orange:hover {
+    display: inline-block;
+    background-color: orange;
+    transition-duration: 3s;
+    transform: rotate(190deg);
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
     left: 0;
     top: 30px;
     Opacity: 1;
 }
 .yellow {
+    display: inline-block;
     background-color: yellow;
+    transition: all ease-in-out 3s;
     border: 5px;
     Box-shadow: 5px;
-    Height: 20px;
-    Width: 20px;
-    Margin: 0px;
-    Padding: 0px;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
+    left: 0;
+    top: 50px;
+    Opacity: 1;
+}
+.yellow:hover {
+    display: inline-block;
+    background-color: yellow;
+    -webkit-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+    /* transition-duration: 5s; */
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
     left: 0;
     top: 50px;
     Opacity: 1;
 }
 .green {
+    display: inline-block;
     background-color: green;
     border: 5px;
     Box-shadow: 5px;
-    Height: 20px;
-    Width: 20px;
-    Margin: 0px;
-    Padding: 0px;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
+    left: 0;
+    top: 70px;
+    Opacity: 1;
+}
+.green:hover {
+    display: inline-block;
+    background-color: green;
+    border: 5px;
+    box-shadow:
+    1px 1px black,
+    2px 2px black,
+    3px 3px black;
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
     left: 0;
     top: 70px;
     Opacity: 1;
 }
 .blue {
+    display: inline-block;
     background-color: blue;
     border: 5px;
     Box-shadow: 5px;
-    Height: 20px;
-    Width: 20px;
-    Margin: 10px;
-    Padding: 10px;
+    transition: ease-in-out 5s;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
+    left: 0;
+    top: 90px;
+    Opacity: 1;
+}
+.blue:hover {
+    display: inline-block;
+    background-color: gray;
+    border: 5px;
+    Box-shadow: 5px;
+    border-radius: 50px;
+    transition-duration: 5s;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
     left: 0;
     top: 90px;
     Opacity: 1;
 }
 .purple {
+    display: inline-block;
     background-color: purple;
     border: 5px;
     Box-shadow: 5px;
-    Height: 20px;
-    Width: 20px;
-    Margin: 0px;
-    Padding: 0px;
+    transition: ease-in-out 3s;
+    Height: 60px;
+    Width: 60px;
+    Margin: 70px;
+    Padding: 70px;
     left: 0;
-    top: 120px;
+    top: 100px;
+    Opacity: 1;
+}
+.purple:hover {
+    display: inline-block;
+    background-color: purple;
+    border: 5px;
+    Box-shadow: 5px;
+    Height: 60px;
+    Width: 60px;
+    Margin: 1000px;
+    Padding: 80px;
+    left: 0;
+    top: 1000px;
     Opacity: 1;
 }
