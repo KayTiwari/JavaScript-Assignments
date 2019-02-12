@@ -1,5 +1,6 @@
 var readline = require('readline-sync');
 var isAlive = true;
+var gameEnd = false;
 var Abe = {
     name: 'Abraham Lincoln',
     hp: 100,
@@ -107,7 +108,7 @@ function firstfight() {
 }
 
 function ffight() {
-    while (Chernobog.hp > 0) {
+    while (Chernobog.hp > 0 && gameEnd === false) {
         var faction = readline.keyIn('What will you do? [M] Melee, [S] Shoot, [I] Inventory, [R] Run ', {limit: 'msir'})
         if (Abe.hp <= 0) {
             isAlive = false;
@@ -354,4 +355,6 @@ function death() {
 function GameOver() {
     console.log('Made by Abhi');
     console.log('Thanks for playing!');
+    gameEnd = true;
+    process.exit(-1);
 }
