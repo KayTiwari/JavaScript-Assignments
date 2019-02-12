@@ -1,6 +1,7 @@
 var readline = require('readline-sync');
 var isAlive = true;
 var Abe = {
+    name: 'Abraham Lincoln',
     hp: 100,
     mattack: 50,
     shot: 666,
@@ -32,12 +33,12 @@ function Enemy(name, hp, attack, lifesteal, description){
 }
 
 var Abaddon = new Enemy('Abaddon', 100, 20, 20, 'The ancient vampire Abaddon has appeared!');
-var Reaper = new Enemy('Reaper', 250, 30, 0, "High alert, this is the reaper, we recommend you focus on escaping.");
+var Reaper = new Enemy('Reaper', 250, 30, 0, "High alert, this is the Reaper, we recommend you focus on escaping or shoot it down.");
 var Osiris = new Enemy('Osiris', 100, 10, 10, "The egyptian vampire Osiris has appeared!");
 var Kim = new Enemy('Kim', 10, 0, 0, "The ancient vampire Kim Kardashian has appeared.. get rid of her");
 enemies = [Abaddon, Reaper, Osiris, Kim];
 vamps = 6;
-ammo = 10;
+ammo = 3;
 rest = 3;
 var hasWon = false;
 if (vamps === 1) {
@@ -63,7 +64,7 @@ beginning();
 function freetime() {
     while (hasWon === false) {
 
-        var action = readline.keyIn(`You have ${vamps} enemies remaining, [T] Travel, [R] Rest, [B] Buy items `,{limit: 'trb'})
+        var action = readline.keyIn(`You have ${vamps} enemies remaining, [T] Travel, [R] Rest, [B] Buy items, [P] Print inventory `,{limit: 'trbp'})
 
         if (action === 't') {
             travel();
@@ -90,6 +91,9 @@ function freetime() {
             } else {
                 freetime();
             }
+        } else if (action === 'p') {
+            console.log(`Name: ${Abe.name} | Items: ${Abe.items} | Ammo: ${ammo} | Potions: ${Abe.potions}`);
+            freetime();
         }
     }
     
