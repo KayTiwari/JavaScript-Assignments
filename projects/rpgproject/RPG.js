@@ -1,6 +1,6 @@
 var readline = require('readline-sync');
 var player = require('play-sound')(opts = {})
-var audio = player.play('foo.mp3', function(err){
+var xaudio = player.play('SpiderDance.mp3', function(err){
     if (err && !err.killed) throw err
   })
 var isAlive = true;
@@ -47,6 +47,7 @@ ammo = 3;
 rest = 3;
 var hasWon = false;
 if (vamps === 1) {
+    xaudio.kill();
     finalfight();
 }
 
@@ -54,14 +55,14 @@ function beginning() {
     isAlive = true;
     if (isAlive === true) {
     console.log('You wake up in a dark room.')
-    setTimeout(function(){console.log('You struggle to remember who you are and what happened.');}, 000)
-    setTimeout(function(){console.log('You are the great vampire slayer, Abraham Lincoln.');}, 000)
-    setTimeout(function(){console.log('...');}, 000)
-    setTimeout(function(){console.log('CRASH!');}, 000)
-    setTimeout(function(){console.log('Somethings coming');}, 000)
-    setTimeout(function(){console.log('You look down and see your axe');}, 00)
-    setTimeout(function(){Abe.axe = readline.question('What is your AXE\'s name? ');}, 000)}
-    setTimeout(function(){firstfight();}, 000);
+    setTimeout(function(){console.log('You struggle to remember who you are and what happened.');}, 2000)
+    setTimeout(function(){console.log('You are the great vampire slayer, Abraham Lincoln.');}, 3000)
+    setTimeout(function(){console.log('...');}, 4000)
+    setTimeout(function(){console.log('CRASH!');}, 5000)
+    setTimeout(function(){console.log('Somethings coming');}, 6000)
+    setTimeout(function(){console.log('You look down and see your axe');}, 7000)
+    setTimeout(function(){Abe.axe = readline.question('What is your AXE\'s name? ');}, 8000)}
+    setTimeout(function(){firstfight();}, 9000);
 }
 
 beginning();
@@ -107,16 +108,13 @@ function freetime() {
 
 
 function firstfight() {
-    player.play('SpiderDance.mp3', function(err){
-        if (err) throw err
-      })
     console.log('It\'s Vampire Chernobog!');
     console.log("\"Dracula said you'd be here.. time to die\"");
     ffight();
 }
 
 function ffight() {
-    while (Chernobog.hp > 0 && gameEnd === false) {
+    while (Chernobog.hp > 0 &&  gameEnd === false) 
         var faction = readline.keyIn('What will you do? [M] Melee, [S] Shoot, [I] Inventory, [R] Run ', {limit: 'msir'})
         if (Abe.hp <= 0) {
             isAlive = false;
@@ -189,7 +187,7 @@ function travel() {
            freetime();
        }
     } if (vamps === 1) {
-        audio.kill();
+        xaudio.kill();
         finalfight();
     }
 }
@@ -269,9 +267,6 @@ function rfight(Enemy) {
 }
 
 function finalfight() {
-    player.play('Megalovania.mp3', function(err){
-        if (err) throw err
-      })
     console.log('...');
     console.log('...');
     console.log('...');
@@ -285,11 +280,14 @@ function finalfight() {
     console.log('...');
     console.log('...');
     console.log('...');
+    console.log('FIGHT START');   
+     var audio = player.play('Megalovania.mp3', function(err){
+        if (err && !err.killed) throw err
+      })
     finfight();
 }
 
 function finfight() {
-    console.log('FIGHT START')
     while (Dracula.hp > 0) {
         var faction = readline.keyIn('What will you do? [M] Melee, [S] Shoot, [I] Inventory, [R] Run ', {limit: 'msir'})
         if (Abe.hp <= 0) {
@@ -359,6 +357,7 @@ function death() {
     if (readline.keyInYN('Would you like to try this again?')) {
         Abe.hp = 100;
         beginning();
+        gameEnd = true;
     } else {
         return 0;
     }
