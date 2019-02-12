@@ -1,4 +1,8 @@
 var readline = require('readline-sync');
+var player = require('play-sound')(opts = {})
+var audio = player.play('foo.mp3', function(err){
+    if (err && !err.killed) throw err
+  })
 var isAlive = true;
 var gameEnd = false;
 var Abe = {
@@ -20,7 +24,7 @@ var Chernobog = {
 
 var Dracula = {
     name: 'Dracula',
-    hp: 300,
+    hp: 1000,
     attack: 30,
     lifesteal: 30
 }
@@ -50,14 +54,14 @@ function beginning() {
     isAlive = true;
     if (isAlive === true) {
     console.log('You wake up in a dark room.')
-    setTimeout(function(){console.log('You struggle to remember who you are and what happened.');}, 3000)
-    setTimeout(function(){console.log('You are the great vampire slayer, Abraham Lincoln.');}, 4000)
-    setTimeout(function(){console.log('...');}, 5000)
-    setTimeout(function(){console.log('CRASH!');}, 6000)
-    setTimeout(function(){console.log('Somethings coming');}, 7000)
-    setTimeout(function(){console.log('You look down and see your axe');}, 8000)
-    setTimeout(function(){Abe.axe = readline.question('What is your AXE\'s name? ');}, 9000)}
-    setTimeout(function(){firstfight();}, 10000);
+    setTimeout(function(){console.log('You struggle to remember who you are and what happened.');}, 000)
+    setTimeout(function(){console.log('You are the great vampire slayer, Abraham Lincoln.');}, 000)
+    setTimeout(function(){console.log('...');}, 000)
+    setTimeout(function(){console.log('CRASH!');}, 000)
+    setTimeout(function(){console.log('Somethings coming');}, 000)
+    setTimeout(function(){console.log('You look down and see your axe');}, 00)
+    setTimeout(function(){Abe.axe = readline.question('What is your AXE\'s name? ');}, 000)}
+    setTimeout(function(){firstfight();}, 000);
 }
 
 beginning();
@@ -86,6 +90,7 @@ function freetime() {
                 if (Abe.fivedollarbills >= 1) {
                     Abe.fivedollarbills--;
                     Abe.potions++;
+                    console.log(`Got a potion, now have ${Abe.potions}`);
                 } else {
                     console.log('Not enough money');
                 }
@@ -93,7 +98,7 @@ function freetime() {
                 freetime();
             }
         } else if (action === 'p') {
-            console.log(`Name: ${Abe.name} | Items: ${Abe.items} | Ammo: ${ammo} | Potions: ${Abe.potions}`);
+            console.log(`Name: ${Abe.name} | Items: ${Abe.items} | Ammo: ${ammo} | Potions: ${Abe.potions} | Money: ${Abe.fivedollarbills}`);
             freetime();
         }
     }
@@ -102,6 +107,9 @@ function freetime() {
 
 
 function firstfight() {
+    player.play('SpiderDance.mp3', function(err){
+        if (err) throw err
+      })
     console.log('It\'s Vampire Chernobog!');
     console.log("\"Dracula said you'd be here.. time to die\"");
     ffight();
@@ -181,6 +189,7 @@ function travel() {
            freetime();
        }
     } if (vamps === 1) {
+        audio.kill();
         finalfight();
     }
 }
@@ -260,6 +269,9 @@ function rfight(Enemy) {
 }
 
 function finalfight() {
+    player.play('Megalovania.mp3', function(err){
+        if (err) throw err
+      })
     console.log('...');
     console.log('...');
     console.log('...');
