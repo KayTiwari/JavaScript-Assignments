@@ -1,0 +1,18 @@
+body {
+    background-color: white;
+    border: 50px solid rgb(248, 248, 46);  
+}
+h1 {
+    color: #59B9FF;
+    border: 5px solid;
+    border-color: #859FB2;
+    display: inline-block;
+}
+.strikened {
+    text-decoration: line-through;
+}
+#data1 {
+ border: 5px solid gray;
+ opacity: 1;
+
+}
