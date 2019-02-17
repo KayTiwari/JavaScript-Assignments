@@ -11,6 +11,12 @@ function renderTodos(todos) {
         var image = document.createElement('img');
         var description = document.createTextNode(todo.description);
         var price = document.createTextNode(todo.price);
+        var x = document.createTextNode('Remove');
+        var deleter = document.createElement('button');
+        var edit = document.createElement('button');
+        var ex = document.createTextNode('edit');
+        edit.appendChild(ex);
+        deleter.appendChild(x);
         image.className = 'images';
         image.src = todo.imgUrl;
 
@@ -19,20 +25,21 @@ function renderTodos(todos) {
         parent.appendChild(text);
         parent.appendChild(description);
         parent.appendChild(price);
+        parent.appendChild(edit);
 
-        console.log(todo)
         var input = document.createElement("input");
+
         input.className = "input";
         input.type = "checkbox";
 
+        //callback
+        edit.addEventListener('click', (e) => editor(e ,todo._id, todo.imgUrl, todo.title, todo.description, todo.price));
         input.addEventListener("click", (e) => handleChecked(e ,todo._id, todo.completed));
+        deleter.addEventListener("click", (e) => deleterfunc(e ,todo._id));
 
-
-        // if(input.checked){
-        //     console.log("hey")
-        // }
 
         parent.appendChild(input);
+        parent.appendChild(deleter);
 
         if (todo.completed) {
             parent.classList.toggle("strikened");
@@ -47,6 +54,49 @@ function handleChecked(e, id, completed) {
     e.preventDefault;
     e.target.parentNode.classList.toggle("strikened");
     striker(id, completed)
+}
+
+function editor(e, id, image, title, description, price) {
+    e.preventDefault;
+    var parent = document.createElement('form');
+parent.id = 'postform';
+parent.className = 'postform';
+parent.innerHTML = 'edit'
+var title = document.createElement('input');
+title.setAttribute('type', 'text');
+title.setAttribute('placeholder', `${title}`);
+title.id = 'ftitle';
+parent.appendChild(title);
+var description = document.createElement('input');
+description.setAttribute('type', 'text');
+description.setAttribute('placeholder', 'description');
+description.id = 'fdescription';
+parent.appendChild(description);
+var price = document.createElement('input');
+price.setAttribute('type', 'number');
+price.setAttribute('placeholder', 'price');
+price.id = 'fprice';
+parent.appendChild(price);
+var image = document.createElement('input');
+image.setAttribute('type', 'text')
+image.setAttribute('placeholder', 'image');
+image.id = 'fimage';
+parent.appendChild(image);
+var button = document.createElement('button');
+button.addEventListener('click', onsubmit);
+var t = document.createTextNode('Submit');
+button.appendChild(t);
+parent.appendChild(button);
+document.body.appendChild(parent);
+}
+
+function deleterfunc(e, id) {
+    e.preventDefault;
+    axios.delete(`https://api.vschool.io/Abhi/todo/${id}`).then(function(response){
+        console.log(response);
+    }).catch(function(error){
+        console.log(error);
+    })
 }
 
 function striker(id, completed) {
@@ -116,11 +166,3 @@ function onsubmit(event) {
         });
 }
 
-
-// var yourCall = {
-//     completed: false,
-//     title: "testttt task",
-//     description: "task description",
-//     price: 61231216,
-//     imgUrl: "sdasd"
-// }
