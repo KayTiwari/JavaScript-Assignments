@@ -1,6 +1,6 @@
 import React from 'react';
 import Friend from './Friend';
-import Pet from './Pet';
+// import Pet from './Pet';
 
 
 const friends = [
@@ -60,17 +60,19 @@ const friends = [
       ]
     }
   ]
-const App = () => {
-     const mappedFriends = friends.map((friend)=>{
-         return (
-             <div>
-             <Friend name={friend.name} pet={friend.pets}/>
-             </div>
-         )
-     })
-     return <div>
-     {mappedFriends}
-     </div>
-     }
+  const App = () => {
+    const names = friends.map((friend) => {
+      return (
+      <div>
+      <Friend name={friend.name} pets={friend.pets}/>
+      </div>
+      )
+    }) 
+    return (
+      <div>
+      {names}
+      </div>
+    )
+  }
 
-     export default App;
+     export default App
