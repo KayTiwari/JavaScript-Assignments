@@ -1,0 +1,10 @@
+#mainNav {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif'
+}
+.navbar-brand {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
