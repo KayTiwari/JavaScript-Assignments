@@ -14,16 +14,16 @@ roller = e => {
    let value = Math.floor(Math.random()*5 + 1)
    this.setState((prevState)=>{
        return {
-           rolls: [...prevState.rolls, value]
+           rolls: [...prevState.rolls, {value}]
        }
    })
    console.log(value);
     } 
 }
     render() {
-        const rollz = this.state.rolls.map((roll) =>{
+        const rollz = this.state.rolls.map((roll, i) =>{
             return(
-                <div>{roll}</div>
+                <div key={i}>{roll}</div>
             )
         })
         return (

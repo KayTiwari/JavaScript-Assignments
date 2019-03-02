@@ -14,7 +14,7 @@ const Badge = (props) => {
         <div style={boxstyle}>
             <div style={style}>Badge</div>
             <div>
-                <p>Name:{props.firstName} {props.lastname}</p>
+                <p>Name:{props.firstName}{props.lastname}</p>
                 <p>Phone:{props.phone}</p>
                 <p>Email:{props.email}</p>
                 <p>Place of Birth:{props.POB}</p>

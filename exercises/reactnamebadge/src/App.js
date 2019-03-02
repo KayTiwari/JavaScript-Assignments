@@ -48,7 +48,7 @@ submitChange = (e) => {
             phone: '',
             food: '',
             desc: '',
-            badgearr: [{firstName, lastName, email, POB, phone, food, desc}, ...prevState.badgearr]
+            badgearr: [{firstName, lastName, email, POB, phone, food, desc}]
         }
     })}
 // display = () => {
