@@ -11,17 +11,17 @@ class App extends Component {
         }
     }
 
-roller = e => {
-    // while (this.state.count < 6) {
-   let value = Math.floor(Math.random()*2 + 1)
-   
+roller = () => {
+   let value = Math.floor(Math.random()*6 + 1)
+   while (this.state.count < 5) {
    this.setState((prevState)=>{
        return {
-           rolls: [...prevState.rolls, {value}],
+           rolls: [...prevState.rolls, value],
            count: prevState.count + 1
        }
    })
-   console.log(value);
+   console.log(this.state.count);
+}
 }
     render() {
         const rollz = this.state.rolls.map((roll, i) =>{
