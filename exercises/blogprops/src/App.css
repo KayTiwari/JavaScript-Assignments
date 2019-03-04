@@ -1,5 +1,5 @@
 #mainNav {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif'
+    font-family: 'Open Sans', 'Helvetica Neue', 'sans-serif';
 }
 .navbar-brand {
     display: inline-block;
@@ -7,4 +7,7 @@
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+}
+.mainheader {
+    background-image: url('https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg')
 }
