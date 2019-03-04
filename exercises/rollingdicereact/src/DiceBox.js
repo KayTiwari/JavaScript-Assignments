@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Die from './Die'
 
 class DiceBox extends Component {
     constructor() {
@@ -10,14 +11,16 @@ class DiceBox extends Component {
     }
 
 roller = e => {
-    while(this.state.count < 6) {
-   let value = Math.floor(Math.random()*5 + 1)
-   this.setState((prevState)=>{
-       return {
-           rolls: [...prevState.rolls, {value}]
-       }
-   })
-   console.log(value);
+    for (var i=0;i<5;i++) {
+        let value = Math.floor(Math.random()*6 + 1)
+       this.setState((prevState)=>{
+           return {
+               rolls: [...prevState.rolls, value],
+               count: prevState.count + 1
+           }
+       })
+       console.log(this.state.count);
+       console.log(i);
     } 
 }
     render() {
@@ -28,8 +31,9 @@ roller = e => {
         })
         return (
         <div>
-            <button onClick={this.roller}></button>
+            <button onClick={this.roller}>Roll</button>
             <h1>{rollz}</h1>
+            <Die number={Math.floor(Math.random()*6 + 1)}/>
         </div>
         )
     }
