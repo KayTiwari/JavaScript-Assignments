@@ -1,0 +1,36 @@
+.landingHeader {
+    border: solid 5px #AC2DB2;
+    background-color: #AC2DB2;
+    height: 70vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    font-family: 'Srisakdi', cursive;
+}
+
+h3 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 50px;
+    font-family: 'Srisakdi', cursive;
+}
+
+.link {
+    text-decoration: none;
+    border: solid black;
+    padding: 40px;
+    position: absolute;
+    top: 790px;
+    left: 850px;
+    color: black;
+    box-shadow: 5px 5px #333;
+}
+.link:hover {
+    background-color: #F8D45D;
+}
+.link:active {
+    box-shadow: 0px 0px #333;
+}

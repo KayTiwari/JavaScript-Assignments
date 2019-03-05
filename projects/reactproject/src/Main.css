@@ -1,0 +1,13 @@
+.mainPage {
+    position: absolute;
+    background-color: #AC2DB2;
+    width: 100vw;
+    height: 10vh;
+}
+.mainPagebottom {
+    position: absolute;
+    background-color: #f8d45d;
+    width: 100vw;
+    height: 30vh;
+    bottom: 0;
+}
