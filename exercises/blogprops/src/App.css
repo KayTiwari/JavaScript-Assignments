@@ -7,7 +7,62 @@
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+.headercontainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 .mainheader {
-    background-image: url('https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg')
+    position: absolute;
+    background-image: url('https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    margin-bottom: 4em;
+    height: 33.2em;
+    width: 100%;
+}
+.blackClover {
+    position: absolute;
+    background-color: black;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    margin-bottom: 4em;
+    height: 33.2em;
+    width: 100%;
+    opacity: .42;
+}
+.headerText {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: white;
+    font-weight: 800;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.headerText2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+    color: white;
+}
+.navbar-nav {
+    position: relative;
+    margin-left: 600px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.nav-item {
+    margin-right: 20px;
+    color: white;
 }

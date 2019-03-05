@@ -3,15 +3,15 @@ import React from 'react';
 const Navbar = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" href="index.html">
-            <div class='container'>
-            <a class="navbar-brand">Start Bootstrap</a>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml auto">
-                    <li class="nav-item" href="index.html"><a class="nav-link">Home</a></li>
-                    <li class="nav-item" href="index.html"><a class="nav-link">About</a></li>
-                    <li class="nav-item" href="index.html"><a class="nav-link">Post</a></li>
-                    <li class="nav-item" href="index.html"><a class="nav-link">Contact</a></li>
+            <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" href="index.html">
+            <div className='container'>
+            <a className="navbar-brand">Start Bootstrap</a>
+            <div className="collapse navbar-collapse" id="navbarResponsive">
+                <ul className="navbar-nav">
+                    <li className="nav-item" href="/"><a className="nav-link">Home</a></li>
+                    <li className="nav-item" href="/"><a className="nav-link">About</a></li>
+                    <li className="nav-item" href="/"><a className="nav-link">Post</a></li>
+                    <li className="nav-item" href="/"><a className="nav-link">Contact</a></li>
                 </ul>
             </div>
             </div>
