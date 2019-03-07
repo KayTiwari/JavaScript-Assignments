@@ -1,13 +1,63 @@
+.mainImage {
+    /* background: cover; */
+    background-repeat: no-repeat;
+    background-position: fixed;
+    height: 100vh;
+    
+}
 .mainPage {
     position: absolute;
-    background-color: #AC2DB2;
+    background-color: #A7B2B0;
     width: 100vw;
-    height: 10vh;
+    height: 20vh;
+    top: 0;
 }
 .mainPagebottom {
     position: absolute;
-    background-color: #f8d45d;
+    background-color: #AC2DB2;
     width: 100vw;
     height: 30vh;
     bottom: 0;
+}
+.crystalBall {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 47%;
+    width: 25%;
+}
+.link1 {
+    text-decoration: none;
+    border: solid black;
+    padding: 40px;
+    position: absolute;
+    top: 400px;
+    left: 530px;
+    color: black;
+    box-shadow: 5px 5px #333;
+}
+.link1:hover {
+    background-color: #F8D45D;
+}
+.link1:active {
+    box-shadow: 0px 0px #333;
+}
+.link2 {
+    text-decoration: none;
+    border: solid black;
+    padding: 40px;
+    position: absolute;
+    top: 400px;
+    left: 1200px;
+    color: black;
+    box-shadow: 5px 5px #333;
+}
+.link2:hover {
+    background-color: #F8D45D;
+}
+.link2:active {
+    box-shadow: 0px 0px #333;
+    outline: 5px;
+    padding: 14px 16px;
 }

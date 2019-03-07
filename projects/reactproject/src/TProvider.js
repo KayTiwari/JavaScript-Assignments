@@ -13,16 +13,19 @@ class TProvider extends Component {
 
     //For Axios.GET
     getList = () => {
-        axios.get('https://rws-cards-api.herokuapp.com/api/v1/cards/search?type=major').then(response =>{
+        console.log('fired')
+        axios.get('https://vschool-cors.herokuapp.com?url=https://rws-cards-api.herokuapp.com/api/v1/cards/search?type=major').then(response =>{
             this.setState({
                 list: response.data
             })
+        }).catch(error => {
+            console.log(error);
         })
     }
 
     //For Axios.POST
     postList = newRead => {
-        axios.post('https://rws-cards-api.herokuapp.com/api/v1/cards/search?type=major', newRead).then(response =>{
+        axios.post('https://vschool-cors.herokuapp.com?url=https://rws-cards-api.herokuapp.com/api/v1/cards/search?type=major', newRead).then(response =>{
             this.setState(prevState => ({
                 list: [...prevState.list, response.data]
             }))
@@ -31,7 +34,7 @@ class TProvider extends Component {
 
     //For Axios.DELETE
     deleteList = id => {
-        axios.delete(`https://rws-cards-api.herokuapp.com/api/v1/cards/search?type=major${id}`).then(res =>{
+        axios.delete(`https://vschool-cors.herokuapp.com?url=https://rws-cards-api.herokuapp.com/api/v1/cards/search?type=major${id}`).then(res =>{
             this.setState(prevState =>({
                 list: prevState.list.filter(list => list.id !== id)
             }))
