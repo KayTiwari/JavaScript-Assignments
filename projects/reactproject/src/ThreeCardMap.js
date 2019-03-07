@@ -1,13 +1,18 @@
 import React from 'react';
 
 const ThreeCardMap = (props) => {
+    const styles = {
+        color: 'black'
+    }
+
     return (
         <div>
-            <h1>Hello world</h1>
-        <h1>{props.name}</h1>
-        <p>{props.meaningup}</p>
-        <p>{props.meaningdown}</p>
+        <h1 style={styles}>{props.name}</h1>
+        <p>Upright: {props.meaningup}</p>
+        <p>Reversed: {props.meaningdown}</p>
+        <p>Number: {props.value}</p>
         </div>
+
     )
 }
 export default ThreeCardMap;
