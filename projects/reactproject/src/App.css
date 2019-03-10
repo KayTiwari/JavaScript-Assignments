@@ -26,11 +26,23 @@ h3 {
     top: 790px;
     left: 850px;
     color: black;
-    box-shadow: 5px 5px #333;
 }
 .link:hover {
     background-color: #F8D45D;
+    box-shadow: 5px 5px #333;
 }
 .link:active {
     box-shadow: 0px 0px #333;
 }
+
+.fortdisp {
+    position: relative;
+}
+.cardimage {
+    position: absolute;
+
+}
+@media screen @ (max-width: 800px) {
+
+}
+

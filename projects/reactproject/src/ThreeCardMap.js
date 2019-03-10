@@ -5,6 +5,9 @@ const ThreeCardMap = (props) => {
         color: 'black'
     }
 
+
+    //make sure numbers can't be repeated
+    // console.log(one);
     return (
         <div>
         <h1 style={styles}>{props.name}</h1>

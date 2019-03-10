@@ -11,6 +11,9 @@ class TProvider extends Component {
         }
     }
 
+    componentDidMount(){
+        this.getList()
+    }
     //For Axios.GET
     getList = () => {
         console.log('fired')
