@@ -7,7 +7,8 @@ class TProvider extends Component {
         super();
 
         this.state = {
-            list: []
+            list: [],
+            on: false
         }
     }
 
@@ -43,6 +44,9 @@ class TProvider extends Component {
             }))
         })
     }
+    toggle = () => {
+        this.setState(({on}) => ({on: !on}))
+    }
 
     render() {
         return (
@@ -50,6 +54,7 @@ class TProvider extends Component {
                 getList: this.getList,
                 postList: this.postList,
                 deleteList: this.deleteList,
+                toggle: this.toggle,
                 ...this.state
             }}>
                 {this.props.children}

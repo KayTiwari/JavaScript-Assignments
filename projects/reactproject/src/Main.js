@@ -1,17 +1,20 @@
 import React from 'react';
 import './Main.css'
 import {Link} from 'react-router-dom'
-
+import Contact from './Contact';
 
 const Main = () => {
     return (
     <div className='mainImage'>
-        <div className='mainPage'></div>
-        <h1>Tarot</h1>
-        <img className='crystalBall' src="https://ae01.alicdn.com/kf/HTB1w4ATXFooBKNjSZFPq6xa2XXa9/3cm-Clear-Natural-Quartz-Crystal-Sphere-Balls-Black-Obsidian-Sphere-Crystal-Ball-Home-Decoration-Craft-4.jpg_640x640.jpg" alt='yes'></img>
-        <div className='mainPagebottom'></div>
+        <img className='landingHeader' src='https://www.freewebheaders.com/wordpress/wp-content/gallery/floral-abstract/colorful-floral-abstract-website-header.jpg'></img>
+        <h1>Delve Into The Whims Of Fate</h1>
+        <div className='stream'></div>
+        {/* <img className='stream' src='https://i.pinimg.com/originals/62/56/ef/6256efa3425f2dc8aaa060fd37a605d1.gif'></img> */}
+        <div className='linkcontainer'>
         <Link to='/Threecard' className='link1'>3 Card Reading</Link>
+        <Contact />
         <Link to='/Fivecard' className='link2'>5 Card Reading</Link>
+        </div>
     </div>
     )
 }

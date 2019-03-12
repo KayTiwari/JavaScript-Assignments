@@ -1,5 +1,7 @@
 import React from 'react'
 import {withProvider} from './TProvider';
+import {Link} from 'react-router-dom';
+
 import Magician from './Tarot/Magician.jpg'
 import Chariot from './Tarot/Chariot.jpg'
 import Death from './Tarot/Death.jpg'
@@ -30,6 +32,11 @@ const two = Math.floor(Math.random()*21 + 0);
 const three = Math.floor(Math.random()*21 + 0);
 const four = Math.floor(Math.random()*21 + 0);
 const five = Math.floor(Math.random()*21 + 0);
+const oneup = Math.random();
+const twoup = Math.random();
+const threeup = Math.random();
+const fourup = Math.random();
+const fiveup = Math.random();
 const cardImg = (num) => {
     switch (num) {
         case 0:
@@ -82,6 +89,9 @@ const styles = {
     color: 'black',
     textAlign: 'center'
 }
+const reroll = () => {
+    window.location.reload();
+}
 const FiveCard = (props) => {
 
     let cardArray;
@@ -95,13 +105,16 @@ const FiveCard = (props) => {
          if (props.list.cards[i].value_int = props.list.cards[one]) {
         //  cardArray = props.list.cards[i].map((card) =>{return (<ThreeCardMap value={card.value_int} name={card.name} meaningup={card.meaning_up} meaningdown={card.meaning_rev}/>)})
         cardArray = [
-            <div>
+            <div className='fortdisp'>
             <h1 style={styles}>Far Past</h1>
             <img className='cardimage' src={cardImg(one)}></img>
+            <div className='cardtext'>
             <h2 style={styles}>{props.list.cards[one].name}</h2>
+            <h2 style={styles}>{oneup < .7 ? 'Upright' : 'Reversed'}</h2>
             <p style={styles}>Upright: {props.list.cards[one].meaning_up}</p>
             <p style={styles}>Reversed: {props.list.cards[one].meaning_rev}</p>
             <p style={styles}>Number: {props.list.cards[one].value}</p>
+            </div>
             </div>
         ]
          }
@@ -111,13 +124,16 @@ const FiveCard = (props) => {
          if (props.list.cards[i].value_int = props.list.cards[two]) {
         //  cardArray = props.list.cards[i].map((card) =>{return (<ThreeCardMap value={card.value_int} name={card.name} meaningup={card.meaning_up} meaningdown={card.meaning_rev}/>)})
         cardArray2 = [
-            <div>
+            <div className='fortdisp'>
             <h1 style={styles}>Past</h1>
             <img className='cardimage' src={cardImg(two)}></img>
+            <div className='cardtext'>
             <h2 style={styles}>{props.list.cards[two].name}</h2>
+            <h2 style={styles}>{twoup < .7 ? 'Upright' : 'Reversed'}</h2>
             <p style={styles}>Upright: {props.list.cards[two].meaning_up}</p>
             <p style={styles}>Reversed: {props.list.cards[two].meaning_rev}</p>
             <p style={styles}>Number: {props.list.cards[two].value}</p>
+            </div>
             </div>
         ]
          }
@@ -126,13 +142,16 @@ const FiveCard = (props) => {
         console.log(props.list.cards[0].value_int)
          if (props.list.cards[i].value_int = props.list.cards[three]) {
         cardArray3 = [
-            <div>
+            <div className='fortdisp'>
             <h1 style={styles}>Present</h1>
             <img className='cardimage' src={cardImg(three)}></img>
+            <div className='cardtext'>
             <h2 style={styles}>{props.list.cards[three].name}</h2>
+            <h2 style={styles}>{threeup < .7 ? 'Upright' : 'Reversed'}</h2>
             <p style={styles}>Upright: {props.list.cards[three].meaning_up}</p>
             <p style={styles}>Reversed: {props.list.cards[three].meaning_rev}</p>
             <p style={styles}>Number: {props.list.cards[three].value}</p>
+            </div>
             </div>
         ]
          }
@@ -142,13 +161,16 @@ const FiveCard = (props) => {
          if (props.list.cards[i].value_int = props.list.cards[four]) {
         //  cardArray = props.list.cards[i].map((card) =>{return (<ThreeCardMap value={card.value_int} name={card.name} meaningup={card.meaning_up} meaningdown={card.meaning_rev}/>)})
         cardArray4 = [
-            <div>
+            <div className='fortdisp'>
             <h1 style={styles}>Future</h1>
             <img className='cardimage' src={cardImg(four)}></img>
+            <div className='cardtext'>
             <h2 style={styles}>{props.list.cards[four].name}</h2>
+            <h2 style={styles}>{fourup < .7 ? 'Upright' : 'Reversed'}</h2>
             <p style={styles}>Upright: {props.list.cards[four].meaning_up}</p>
             <p style={styles}>Reversed: {props.list.cards[four].meaning_rev}</p>
             <p style={styles}>Number: {props.list.cards[four].value}</p>
+            </div>
             </div>
         ]
          }
@@ -158,13 +180,16 @@ const FiveCard = (props) => {
          if (props.list.cards[i].value_int = props.list.cards[five]) {
         //  cardArray = props.list.cards[i].map((card) =>{return (<ThreeCardMap value={card.value_int} name={card.name} meaningup={card.meaning_up} meaningdown={card.meaning_rev}/>)})
         cardArray5 = [
-            <div>
+            <div className='fortdisp'>
             <h1 style={styles}>Far Future</h1>
             <img className='cardimage' src={cardImg(five)}></img>
+            <div className='cardtext'>
             <h2 style={styles}>{props.list.cards[five].name}</h2>
+            <h2 style={styles}>{fiveup < .7 ? 'Upright' : 'Reversed'}</h2>
             <p style={styles}>Upright: {props.list.cards[five].meaning_up}</p>
             <p style={styles}>Reversed: {props.list.cards[five].meaning_rev}</p>
             <p style={styles}>Number: {props.list.cards[five].value}</p>
+            </div>
             </div>
         ]
          }
@@ -184,6 +209,8 @@ const FiveCard = (props) => {
              </div>: 
         <h4>loading</h4>
         }
+        <button className="button" onClick={reroll}>Re-Roll</button>
+        <Link to='./Main'>Back to Main Site</Link>
         </div>
 
     )

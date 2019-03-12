@@ -1,7 +1,13 @@
 .landingHeader {
-    border: solid 5px #AC2DB2;
-    background-color: #AC2DB2;
+    /* border: solid 5px #AC2DB2; */
+    /* background-color: #AC2DB2; */
+    background-image: url('https://media.giphy.com/media/cSCOzZpraxWtq/giphy.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 70vh;
+    width: 100%;
+    position: absolute;
+    box-shadow: inset 0 0 0 500px rgba(0, 0, 0, .3)
 }
 
 h1 {
@@ -37,12 +43,84 @@ h3 {
 
 .fortdisp {
     position: relative;
+    margin-top: 50px;
+    perspective: 1000px;
 }
 .cardimage {
+    /* display: inline; */
+    position: relative;
+    margin-right: 1000px;
+    top: 50%;
+    left: 43%;
+    margin-top: 40px;
+    /* transform: translate(-50%,-50%) */
+
+}
+.cardtext {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top:50%;
+    left: -2%;
+}
+.button {
+    position: relative;
+    left: 43%;
+    width: 200px;
+    height: 100px;
+    box-shadow: 5px 5px #333;
+    margin-top: 30px;
+}
+.button:hover {
+    background-color: #F8D45D;
+}
+.button:active {
+    box-shadow: 0px 0px;
+}
+
+@media screen and (max-width: 1250px) {
+
+.cardimage {
+    left: 40%;
+}
+}
+@media screen and (max-width: 1050px) {
+   .link {
+        left: 440px;
+   }
+}
+@media screen and (max-width: 750px) {
+.cardimage {
+    left: 35%;
+}
+.back {
     position: absolute;
-
+    top: 2330px;
+    left: 300px;
 }
-@media screen @ (max-width: 800px) {
-
+.button {
+    left: 36%;
 }
-
+}
+@media screen and (max-width: 667px) {
+.back {
+    top: 2385px;
+    left: 295px;
+}
+.link {
+    left: 220px
+}
+}
+@media screen and (max-width: 667px) {
+    .link {
+        left: 110px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .cardimage {
+        left: 23%;
+    }
+    .button {
+        left: 28%;
+    }
+}
