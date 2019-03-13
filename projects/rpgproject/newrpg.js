@@ -43,6 +43,7 @@ var Reaper = new Enemy('Reaper', 250, 30, 0, "High alert, this is the Reaper, we
 var Osiris = new Enemy('Osiris', 100, 10, 10, "The egyptian vampire Osiris has appeared!");
 var Kim = new Enemy('Kim', 10, 0, 0, "The ancient vampire Kim Kardashian has appeared.. get rid of her");
 enemies = [Abaddon, Reaper, Osiris, Kim];
+console.log(enemies);
 vamps = 6;
 ammo = 3;
 rest = 3;
