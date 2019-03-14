@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 6969;
 const uuid = require('uuid');
+const mongoose = require('mongoose')
+const Vacation = require('./vacation');
 
 //bodyParser converts JSON to javascript objects, between client and server
 // const bodyParser = require('body-parser')
@@ -39,10 +41,11 @@ app.get('/food', (req, res) => {
 
 //POST
 app.post('/food', (req, res) => {
-
-    console.log(req.body)
-    database.push(req.body);
-    res.send(database)
+    const newObj = new Vacation(req.body);
+    newObj.save(err => {
+        if (err) return res.status(500).send(err);
+        return res.status(200).send(newObj);
+    })
 })
 
 //delete
@@ -72,7 +75,9 @@ app.listen(port, () => {
 })
 
 
-
+mongoose.connect('mongodb://localhost:27017/database', {useNewUrlParser: true}).then(() => {
+    console.log("Connected to MongoDB")
+})
 
 // GET1:
 app.get('/spot/:_id', (req, res) => {
