@@ -8,9 +8,25 @@ const database = [
         firstName: "Luke",
         lastName: "Skywalker",
         isAlive: true,
-        bounty: 500,
         type: 'Jedi',
-        id: 666
+        id: 666,
+        img: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Luke_Skywalker.png/220px-Luke_Skywalker.png'
+    },
+    {
+        firstName: "Anakin",
+        lastName: "Skywalker",
+        isAlive: true,
+        type: 'Sith',
+        id: 64206,
+        img: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg'
+    },
+    {
+        firstName: "Mace",
+        lastName: "Windu",
+        isAlive: false,
+        type: 'Jedi',
+        id: 420,
+        img: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/04/13/20/mace-windu.jpg'
     }
 ]
 

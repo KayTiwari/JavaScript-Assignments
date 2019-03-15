@@ -39,6 +39,16 @@ app.get('/food', (req, res) => {
     res.send({database})
 })
 
+// .get((req, res) => {
+//     Vacation.find(err, vacation) => {
+//         if (err) {
+//             return res.status(500).send(err);
+//         } else {
+//             return res.status(200).send(vacation)
+//         }
+//     }
+// })
+
 //POST
 app.post('/food', (req, res) => {
     const newObj = new Vacation(req.body);
