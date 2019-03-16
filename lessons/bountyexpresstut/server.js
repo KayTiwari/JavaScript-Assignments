@@ -6,6 +6,7 @@ const port = 3432
 app.use(express.json());
 
 app.use('/api/bounties', require('./routes/bountyRoutes'));
+// app.use('api/clownshoes', require('./routes/circusRoutes'))
 
 mongoose.connect('mongodb://localhost:27017/bounties', {useNewUrlParser: true})
     .then(() => console.log('Connected to MongoDB'))
