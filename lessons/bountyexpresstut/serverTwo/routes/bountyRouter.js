@@ -7,7 +7,8 @@ bountyRoute.route('/')
         Bounty.find((err, bounties) => {
             if (err) {
               return res.status(500).send(err);
-            } else {
+            }
+             else {
                return res.status(200).send(bounties);
             }
         })
@@ -48,7 +49,7 @@ bountyRoute.route('/:_id')
         )
     })
 
-    .get((req, res) => {
+    .get1((req, res) => {
         Bounty.findById(
             {_id: req.params.id},
             (err, bounty) => {
