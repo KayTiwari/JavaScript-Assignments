@@ -60,9 +60,6 @@ class JProvider extends Component {
         })
     }
 
-    // postxBounty = () => {
-
-    // }
 
     render() {
         return (
