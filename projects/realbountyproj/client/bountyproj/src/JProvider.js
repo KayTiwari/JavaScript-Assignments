@@ -15,6 +15,9 @@ class JProvider extends Component {
             image: ''
         }
     }
+    componentDidMount() {
+        this.getBounties()
+    }
 
         // GET
         getBounties = () => {
@@ -69,6 +72,7 @@ class JProvider extends Component {
                 editBounties: this.editBounties,
                 deleteBounties: this.deleteBounties,
                 postxBounty: this.postxBounty,
+                eventHandler: this.eventHandler,
                 ...this.state
             }}>
                 {this.props.children}
