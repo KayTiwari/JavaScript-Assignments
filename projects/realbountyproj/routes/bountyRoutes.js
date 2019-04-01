@@ -25,9 +25,9 @@ bountyRoute.route('/')
 
 bountyRoute.route('/:_id')
         .delete((req, res) => {
-            const {id} = req.params;
-            Bounty.findByIdAndDelete(
-                {_id : id},
+            console.log(req.params._id)
+            Bounty.findOneAndDelete(
+                {_id : req.params._id},
                 (err) => {
                     err && res.status(500).send(`Item not deleted, ${err}`);
                     return res.status(200).send('Item successfully deleted')
@@ -36,10 +36,11 @@ bountyRoute.route('/:_id')
         })
 
         .put((req, res) => {
-            const {id} = req.params;
+            const {_id} = req.params
+            console.log(req.params)
             const newData = req.body
-            Bounty.findByIdandUpdate(
-                {_id : id},
+            Bounty.findByIdAndUpdate(
+                {_id : req.params._id},
                 newData,
                 (err, bounty) => {
                     err && res.status(500).send(err);

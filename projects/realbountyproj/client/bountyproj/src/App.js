@@ -12,14 +12,18 @@ class App extends Component {
 
         }
     }
-    componentDidUpdate(){
-        this.getBounties();
+    componentDidMount(){
+        this.props.getBounties();
+    }
+    componentWillUpdate(){
+        console.log(this.props.bounties.firstName)
     }
 
 
-    render(props) {
-            {this.state.bounties ? mappedJedi = this.state.bounties.map((jedi) =>{return (<BountyInfo firstName={jedi.firstName} lastName={jedi.lastName} isJedi={jedi.isJedi} bounty={jedi.bountyAmount}/>)}) : console.log('loading')}
-        console.log(props);
+    render() {
+        mappedJedi = this.props.bounties && this.props.bounties.map((jedi) =>{return (<BountyInfo firstName={jedi.firstName} lastName={jedi.lastName} isJedi={jedi.isJedi} bounty={jedi.bountyAmount} id={jedi._id} image={jedi.image}/>)})
+        
+        console.log(this.props.bounties);
             return (
                 <div>
                     <PostBounty />

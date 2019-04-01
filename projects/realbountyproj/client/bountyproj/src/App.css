@@ -1,0 +1,14 @@
+.bountycardJedi {
+    border: 5px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    width: 50%;
+    background-color: lightblue;
+}
+.bountycardSith {
+    border: 5px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    width: 50%;
+    background-color: maroon;
+}
