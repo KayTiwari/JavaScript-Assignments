@@ -7,3 +7,34 @@
 .redi {
     color: red;
 }
+.text-center {
+    margin-top: 100px;
+}
+#exit {
+    margin-top: 400px;
+}
+
+#canvas {
+    display: block;
+    background-color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px red;
+}
+.centerScreen {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+.title {
+    top: 20%;
+    color: white;
+    font-size: 80px;
+}
+.pressSpace{
+    top: 35%;
+    font-size: 20px;
+    color: #ffffff;
+}

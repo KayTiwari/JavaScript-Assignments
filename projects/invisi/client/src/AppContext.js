@@ -22,6 +22,7 @@ export class AppContextProvider extends Component {
     }
 
     signup = userInfo => {
+        console.log('fired')
         return axios.post('/auth/signup', userInfo)
             .then(response => {
                 const { user, token } = response.data
@@ -47,6 +48,16 @@ export class AppContextProvider extends Component {
                 })
                 return response;
             })
+    }
+
+    logout = () => {
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+        this.setState({
+            todos: [],
+            user: {},
+            token: ""
+        })
     }
 
     getTodos = () => {
@@ -103,6 +114,7 @@ export class AppContextProvider extends Component {
                     deleteTodo: this.deleteTodo,
                     signup: this.signup,
                     login: this.login,
+                    logout: this.logout,
                     ...this.state
                 }}
             >
