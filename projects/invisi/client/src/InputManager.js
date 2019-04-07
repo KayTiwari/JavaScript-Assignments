@@ -2,10 +2,14 @@ import React, {Component} from 'react';
 
 
 const KEY = {
+    LEFT: 37,
+    RIGHT: 39,
     UP: 38,
     DOWN: 40,
     A: 65,
     D: 68,
+    W: 87,
+    S: 83,
     SPACE: 32,
     ENTER: 13
 }
@@ -14,9 +18,11 @@ class InputManager extends Component{
     constructor(){
         super();
 
-        this.state = {
+        this.pressedKeys = {
             left: 0,
             right: 0,
+            up: 0,
+            down: 0,
             space: 0,
             enter: 0
         }
@@ -34,7 +40,7 @@ class InputManager extends Component{
     handleKeys = (value, e) => {
         let keys = this.pressedKeys;
         switch(e.keyCode) {
-            case KEY.UP:
+            case KEY.LEFT:
             case KEY.A:
                 keys.left = value;
                 break;

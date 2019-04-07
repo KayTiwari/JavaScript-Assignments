@@ -12,7 +12,7 @@ class TitleScreen extends Component {
     render() {
         return (
             <div>
-                <span className='centerSceen title'>PONG</span>
+                <span className='centerSceen title'>SpaceFighter V</span>
                 <span className='centerScreen pressSpace'>Press Enter to start</span>
             </div>
         )

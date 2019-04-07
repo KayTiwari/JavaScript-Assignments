@@ -1,42 +1,55 @@
 import React, {Component} from 'react';
 import Bullet from './Bullet';
 
-class Ship extends Component{
+export const Direction = {
+    Left: 0,
+    Right: 1
+}
+
+class Invader extends Component {
     constructor(args){
-        super({
-        })
+        super();
+
         this.state = {
+
         }
+        this.direction = Direction.Right;
         this.position = args.position;
         this.speed = args.speed;
         this.radius = args.radius;
         this.delete = false;
-        this.onDie = args.onDie;
+        this.onDie = args.onDie
         this.bullets = [];
         this.lastShot = 0;
     }
-    update = (keys) => {
-        if (keys.right) {
+    reverse = () => {
+        if (this.direction === Direction.Right){
+            this.position.x -= 10;
+            this.direction = Direction.Left;
+        } else {
+            this.direction = Direction.Right;
+            this.position.x += 10;
+        }
+    }
+
+    update = () => {
+        if (this.direction === Direction.Right) {
             this.position.x += this.speed;
-        } else if (keys.left) {
+        } else {
             this.position.x -= this.speed;
         }
-        if (keys.space && Date.now() - this.lastShot > 250) {
+        let nextShot = Math.random() * 5000;
+        if (Date.now() - this.lastShot > 250 * nextShot) {
             const bullet = new Bullet ({
                 position: {x: this.position.x, y: this.position.y - 5},
                 speed: 2.5,
                 radius: 15,
-                direction: "up"
-            });
+                direction: "down"
+            })
             this.bullets.push(bullet);
             this.lastShot = Date.now();
         }
     }
-
-    die = () => {
-        this.onDie();
-    }
-
     renderBullets(state) {
         let index = 0;
         for(let bullet of this.bullets) {
@@ -50,38 +63,35 @@ class Ship extends Component{
         }
     }
 
+    die = () => {
+        this.delete = true;
+        // this.onDie();
+    }
+
     render(state) {
-        if (this.position.x > state.screen.width) {
-            this.position.x = 0;
-        } else if (this.position.x < 0) {
-            this.position.x = state.screen.width;
-        }
-        if (this.position.y > state.screen.height) {
-            this.position.y = 0;
-        } else if (this.position.y < 0) {
-            this.position.y = state.screen.height;
-        }
-        this.renderBullets(state);
         const context = state.context;
+        this.renderBullets(state);
         context.save();
         context.translate(this.position.x, this.position.y);
-        context.strokeStyle = '#ffffff';
-        context.fillStyle = '#ffffff';
+        context.strokeStyle = '#FFFF00';
+        context.fillStyle = '#FFBD4A';
         context.lineWidth = 2;
         context.beginPath();
-        context.moveTo(0, -25);
-        context.lineTo(15, 15);
-        context.lineTo(5, 7);
-        context.lineTo(-5, -7);
+        context.moveTo(-5, 25);
+        context.lineTo(5, 25);
+        context.lineTo(5, 0);
+        context.lineTo(15, 0);
+        context.lineTo(15, -15);
+        context.lineTo(-15, -15);
         context.lineTo(-15, 15);
+        context.lineTo(5, 0);
         context.closePath();
         context.fill();
         context.stroke();
         context.restore();
-
-        return(
+        return (
             <div></div>
         )
     }
 }
-export default Ship
+export default Invader
