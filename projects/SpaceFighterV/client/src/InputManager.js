@@ -6,12 +6,9 @@ const KEY = {
     RIGHT: 39,
     UP: 38,
     DOWN: 40,
-    A: 65,
-    D: 68,
-    W: 87,
-    S: 83,
     SPACE: 32,
-    ENTER: 13
+    ENTER: 13,
+    S: 83
 }
 
 class InputManager extends Component{
@@ -41,11 +38,9 @@ class InputManager extends Component{
         let keys = this.pressedKeys;
         switch(e.keyCode) {
             case KEY.LEFT:
-            case KEY.A:
                 keys.left = value;
                 break;
             case KEY.RIGHT:
-            case KEY.D:
                 keys.right = value;
                 break;
             case KEY.SPACE:

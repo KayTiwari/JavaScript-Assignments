@@ -20,7 +20,7 @@ export function checkCollisions(obj1, obj2) {
     var vx = obj1.position.x - obj2.position.x;
     var vy = obj1.position.y - obj2.position.y;
     var length = Math.sqrt(vx * vx + vy * vy);
-    if (length + 10 < obj1.radius + obj2.radius) {
+    if (length + 10 <= obj1.radius + obj2.radius) {
         return true;
     }
     return false;

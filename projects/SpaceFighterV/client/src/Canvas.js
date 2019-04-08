@@ -8,9 +8,15 @@ import GameOverScreen from './ReactComponents/GameOverScreen';
 import { withProvider } from './AppContext';
 import { withRouter } from 'react-router-dom';
 
-const width = 800;
+const width = 850;
 const height = window.innerHeight;
 const ratio = window.devicePixelRatio || 1
+let TrueUser;
+if (localStorage.user) {
+    TrueUser = JSON.parse(localStorage.getItem("user")).username
+} else {
+    TrueUser = "FakeUser"
+}
 const GameState = {
     StartScreen: 0,
     Playing: 1,
@@ -26,24 +32,21 @@ class Canvas extends Component {
             screen: {
                 width: width,
                 height: height,
-                ratio: window.devicePixelRatio
+                ratio: ratio
             },
             gameState: GameState.StartScreen,
             previousState: GameState.StartScreen,
             context: null,
             score: 0,
-            username: JSON.parse(localStorage.getItem("user")).username || 'FakeUser'
+            username: TrueUser,
         }
         this.ship = null;
         this.invaders = [];
         this.lastStateChange = 0;
         this.previousDelta = 0;
-        // this.fpsLimit = 30;
-        // this.showControls = false;
     }
     componentDidMount(){
         this.state.input.bindKeys();
-        window.addEventListener('resize', this.handleResize.bind(this, false))
         const context = this.refs.canvas.getContext('2d');
         this.setState({
             context: context
@@ -55,17 +58,8 @@ class Canvas extends Component {
         this.state.input.unbindKeys();
     }
 
-    handleResize(value, e){
-        this.setState({
-          screen : {
-            width: width,
-            height: height,
-            ratio: window.devicePixelRatio || 1,
-          }
-        });
-      }  
 
-    update(currentDelta) {
+    update() {
         const keys = this.state.input.pressedKeys;
         if (this.state.gameState === GameState.StartScreen && keys.enter){
             this.startGame();
