@@ -106,7 +106,6 @@ class Canvas extends Component {
     clearBackground = () => {
         const context = this.state.context;
         context.save();
-        context.scale(this.state.screen.ratio, this.state.screen.ratio);
         context.fillRect(0, 0, this.state.screen.width, this.state.screen.height);
         context.globalAlpha = 1;
     }

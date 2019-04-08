@@ -11,6 +11,7 @@ export function checkCollisionsFor(items1, items2) {
             if (checkCollisions(item1, item2)) {
                 item1.die();
                 item2.die();
+                // console.log('collision occurred')
             }
         }
     }
@@ -19,8 +20,9 @@ export function checkCollisionsFor(items1, items2) {
 export function checkCollisions(obj1, obj2) {
     var vx = obj1.position.x - obj2.position.x;
     var vy = obj1.position.y - obj2.position.y;
-    var length = Math.sqrt(vx * vx + vy * vy);
-    if (length + 10 <= obj1.radius + obj2.radius) {
+    var ED = Math.sqrt(vx * vx + vy * vy);
+    if (ED + 10 <= obj1.radius + obj2.radius) {
+        // console.log('fired')
         return true;
     }
     return false;

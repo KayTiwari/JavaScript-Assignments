@@ -41,7 +41,7 @@ class Register extends Component {
                 <input onChange={this.handleChange} type='text' id="inputUsername" className='form-group' name='username' placeholder='Username' required autoFocus></input>
                 <div>
                 <label for="inputPass" className="sr-only">Password</label>
-                <input onChange={this.handleChange} type='text' id="inputPassword" className='form-group' name='password' placeholder='Password' required></input>
+                <input onChange={this.handleChange} type='password' id="inputPassword" className='form-group' name='password' placeholder='Password' required></input>
                 </div>
                 <button onClick={this.handleRegister} className='btn btn-lg btn-info btn-block' type="submit">Create Account</button>
                 <Link to='/'><button onClick={this.handleSubmit} className='btn btn-lg btn-muted btn-block' type="submit">Go Back</button></Link>

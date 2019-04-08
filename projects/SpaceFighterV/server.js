@@ -10,7 +10,7 @@ app.use("/auth", require("./routes/auth"));
 app.use("/api/scores", require("./routes/scores"));
 
 app.listen(PORT, () => {
-    console.log( `(+) ${PORT} running`);
+    console.log( `(x) ${PORT} running`);
 })
 
 mongoose.set('useCreateIndex', true);

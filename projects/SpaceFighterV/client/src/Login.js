@@ -39,7 +39,7 @@ class Login extends Component {
     <input onChange={this.handleChange} type='text' id="inputUsername" className='form-group' name='username' placeholder='Username' required autoFocus></input>
     <div>
     <label for="inputPass" className="sr-only">Password</label>
-    <input onChange={this.handleChange} type='text' id="inputPassword" className='form-group' name='password' placeholder='Password' required></input>
+    <input onChange={this.handleChange} type='password' id="inputPassword" className='form-group' name='password' placeholder='Password' required></input>
     </div>
         <div className='center'>
     <button onClick={this.handleSubmit} className='btn btn-lg btn-primary btn-block' type="submit">Log in</button>
