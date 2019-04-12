@@ -1,11 +1,10 @@
 
-
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
 
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;    
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;   
   box-sizing: border-box;         
 }
 
@@ -44,7 +43,7 @@ header {
   height: 230px;
   padding: 20px 0 70px 0;
 
-  background: #2d6360 50% 0 url(http://www.csszengarden.com/214/huntington.jpg) no-repeat;
+  background: #2d6360 50% 0 url(huntington.jpg) no-repeat; 
 
   background-attachment: fixed, fixed, fixed, scroll;
   background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
@@ -148,51 +147,25 @@ p {
   text-decoration: none;
 }
 
-.intro a::before {
-  display: inline-block;
-  position: absolute;
-  top: 6px;
-  left: 8px;
-  padding: 2px;
-  color: #a9b995;
-  background: #d9e1cd;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px;
-
-  content: "D";
-  font-size: 16px;
-  text-indent: 0;
+.intro a::before {display: inline-block;position: absolute;top: 6px;left: 8px;padding: 2px;color: #a9b995;background: #d9e1cd;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-radius: 2px;content: "D";font-size: 16px;text-indent: 0;
 
 
-  
-  font-family: 'verdemoderna';
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-
-  -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
-}
+  speak: none;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;-webkit-font-smoothing: antialiased;-webkit-transition: all 0.25s ease-out;-moz-transition: all 0.25s ease-out;transition: all 0.25s ease-out;}
   .intro a:hover::before {
     color: #fff;
     background: #357d93;
   }
 
 
-/* coloured cutoff */
+
 div.participation, div.benefits {
   background-attachment: scroll, scroll, fixed;
   background-color: rgba(138,188,159,0.5);
-  background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png), url(gridlines.png);
+  background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
   background-repeat: repeat, repeat, no-repeat;
   background-size: auto, auto, cover;
 }
-/* extra padding at the cutoffs */
+
 div.participation {
   padding: 3em 0;
   margin-top: 3em;
@@ -209,7 +182,7 @@ div.participation p, div.benefits p {
 }
 
 
-/* sidebar base styles */
+
 .sidebar {
   background: #edf4f0;
 }
@@ -244,12 +217,12 @@ div.participation p, div.benefits p {
   font-style: italic;
 }
   .design-selection li:hover, .design-selection li:focus {
-    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); /* IE10+ */
-    background: linear-gradient(to right,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); /* W3C */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
   }
 .design-selection li:nth-child(2n+1), .zen-resources li:nth-child(2n+1) {
   clear: left;
@@ -264,7 +237,7 @@ div.participation p, div.benefits p {
 }
 
 
-/* select a design */
+
 .design-selection h3 {
   display: none;
 }
@@ -276,7 +249,7 @@ div.participation p, div.benefits p {
 
 
 
-/* archives navigation */
+
 .design-archives {
   position: absolute;
   top: 160px;
@@ -345,7 +318,7 @@ div.participation p, div.benefits p {
   text-indent: 0;
   font-size: 44px;
 
-  /* icomoon.io defaults */
+  
   font-family: 'verdemoderna';
   speak: none;
   font-weight: normal;
@@ -368,7 +341,7 @@ div.participation p, div.benefits p {
 
 
 
-/* resources */
+
 .zen-resources {
   overflow: hidden;
   background-color: rgba(138,188,159,0.5);
@@ -385,7 +358,7 @@ div.participation p, div.benefits p {
 }
 
 
-/* busting out the credits block */
+
 .requirements p:nth-child(5) {
   padding-bottom: 2em;
 }
@@ -429,7 +402,7 @@ div.participation p, div.benefits p {
 
 
 
-/* main footer */
+
 footer {
   clear: both;
   padding: 3em 10%;
@@ -466,7 +439,7 @@ footer a::before {
   font-size: 36px;
   text-indent: 0;
 
-  /* icomoon.io defaults */
+  
   font-family: 'verdemoderna';
   speak: none;
   font-weight: normal;
@@ -488,16 +461,15 @@ footer a::before {
 
 
 
-/* low-res CSS */
+
 @media only screen and (max-width: 600px) {
 
-  /* these download links make approximately zero sense
-     on a phone without a user-accessible file system. */
+  
   .summary p:last-child {
     display: none;
   }
 
-  /* type adjustments */
+
   h1 {
     margin-top: 30px;
     font-size: 2.5em;
@@ -553,7 +525,7 @@ footer a::before {
 
 @media only screen and (max-width: 320px) {
 
-    /* adjusting the site header type size */
+    
     h1 {
         font-size: 2em;
     }
@@ -561,13 +533,12 @@ footer a::before {
         font-size: 1.3em;
     }
 
-    /* linearizing the design list on small screens */
+
     .design-selection li, .zen-resources li {
         float: none;
         width: 100%;
     }
 
-    /* adjusting footer type, icons */
     .requirements p:last-child {
         font-size: 1.4em;
     }
@@ -587,7 +558,7 @@ footer a::before {
 }
 
 
-/* mid-res CSS */
+
 @media only screen and (max-width: 1132px) {
   header {
     border-top: solid 10px rgba(19, 67, 71, 0.9);
@@ -604,7 +575,7 @@ footer a::before {
     padding-top: 2em;
   }
 
-  /* page footer */
+  
   footer {
     padding: 3em 0;
   }
@@ -620,7 +591,7 @@ footer a::before {
 }
 
 
-/* high-res CSS */
+
 @media only screen and (min-width: 1132px) {
   body {
     background: #ffffff;
@@ -674,7 +645,7 @@ footer a::before {
     margin: -65px 40px 0 0;
     background: url(enso.svg);
     background-size: 100%;
-    opacity: 0.1;
+    opacity: 0.6;
 
     -webkit-animation: koan 36000s infinite alternate;
     -moz-animation: koan 36000s infinite alternate;
@@ -689,7 +660,7 @@ footer a::before {
     font-size: 1em;
   }
 
-  /* main layout blocks */
+  
   nav, .supporting {
     display: inline;
   }
@@ -713,14 +684,14 @@ footer a::before {
   }
 
 
-  /* coloured cutoff */
+  
   div.participation, div.benefits {
     width: 100%;
     padding-left: 10%;
     padding-right: 38%;
     margin: 0;
   }
-  /* extra padding at the cutoffs */
+  
   div.participation, div.requirements {
     padding-top: 4em;
   }
@@ -747,7 +718,7 @@ footer a::before {
   }
 
 
-  /* sidebar styling */
+  
   .design-selection, .zen-resources {
     position: absolute;
     top: 360px;
@@ -763,11 +734,11 @@ footer a::before {
     width: auto;
     padding-left: 0;
     padding-right: 0;
-    margin: 0 29.4% 0 14.7%; /* 0 10% 0 5% of total width */
+    margin: 0 29.4% 0 14.7%; 
   }
 
 
-  /* select a design */
+  
   .design-selection li:first-child {
     border-top: 0;
   }
@@ -775,7 +746,7 @@ footer a::before {
     background: none;
   }
 
-  /* archives navigation */
+
   .design-archives {
     position: absolute;
     z-index: 2;
@@ -811,7 +782,7 @@ footer a::before {
   }
 
 
-  /* resources navigation */
+
   .zen-resources {
     position: absolute;
     top: 1310px;
@@ -835,7 +806,6 @@ footer a::before {
 
 
 @media only screen and (min-width: 1150px) {
-  /* page footer */
   footer a {
     width: 76px;
     height: 76px;
@@ -847,11 +817,7 @@ footer a::before {
   }
 }
 
-/*
-  Okay, look, I feel rather awful about this. But due to source order it
-  seems like the only way to pull off the separated sidebar. Perhaps
-  flexbox is the way forward here, once the syntax settles down a bit.
-*/
+
 @media only screen and (min-width: 1120px) {.zen-resources {top: 1490px;}}
 @media only screen and (min-width: 1240px) {.zen-resources {top: 1460px;}}
 @media only screen and (min-width: 1260px) {.zen-resources {top: 1420px;}}
@@ -862,7 +828,7 @@ footer a::before {
 @media only screen and (min-width: 1848px) {.zen-resources {top: 1270px;}}
 @media only screen and (min-width: 2015px) {.zen-resources {top: 1240px;}}
 @media only screen and (min-width: 2115px) {.zen-resources {top: 1210px;}}
-@media only screen and (min-width: 2400px) {/* you're kidding, right? */}
+@media only screen and (min-width: 2400px) {}
 
 
 @-webkit-keyframes koan {
@@ -896,7 +862,6 @@ footer a::before {
     }
 }
 
-/* high-DPI adjustments */
 @media
     (min--moz-device-pixel-ratio: 1.5),
     (-o-min-device-pixel-ratio: 3 / 2),
@@ -914,18 +879,14 @@ footer a::before {
         background-size: 50% auto, auto, auto, cover;
     }
 
-    /*
-        This shouldn't be necessary, but it is. Due to differences in how
-        Chrome calculates gradients and % widths / padding, the archives
-        spill out of the visual container at some screen sizes.
-    */
+
     .design-archives nav {
         right: 3%;
         width: 29%;
     }
 }
 
-/* icon fonts */
+
 @font-face {
 	font-family: 'verdemoderna';
 	src:url('verdemoderna.eot');
@@ -935,4 +896,4 @@ footer a::before {
 		url('verdemoderna.svg#verdemoderna') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}                                                                                                               /* 1000 lines?! */
+}                                                                                                        
